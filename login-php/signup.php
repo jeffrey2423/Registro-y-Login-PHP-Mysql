@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
  
 <html lang="es">
@@ -13,6 +14,11 @@
 <?php
 require 'componentes/header.php';
 ?>
+
+<?php if(!empty($message)): ?>
+      <p> <?= $message ?></p>
+    <?php endif; ?>
+
 <div class="container p-4">
 	<div class="row">
 		<div class="col-md-a mx-auto">
@@ -21,34 +27,28 @@ require 'componentes/header.php';
 					<h3>signUp</h3>
 				</div>
 				<div class="card-body">
-					<img src="assets/img/account.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
-					<form action="/signup" method="POST">
+					<img src="img/account.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
+					<form action="php/ControladorSignup.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
-							<input type="text" name="fullname" placeholder="Nombre Completo" class="form-control" autofocus="true">
+							<input type="text" name="nombre" placeholder="Nombre Completo" class="form-control" autofocus="true">
 						</div>
 						<div class="form-group">
-							<input type="text" name="username" placeholder="Nombre Usuario" class="form-control" >
+							<input type="text" name="usuario" placeholder="Nombre Usuario" class="form-control" >
 						</div>
 						<div class="form-group">
-							<input type="password" name="password" placeholder="Contraseña" class="form-control">
+							<input type="password" name="clave" placeholder="Contraseña" class="form-control">
 						</div>
                         <div class="form-group">
-							<input type="password" name="repassword" placeholder="Confirmar contraseña" class="form-control">
+							<input type="password" name="reclave" placeholder="Confirmar contraseña" class="form-control">
 						</div>
-                        <div class="input-group mb-3">
+                        <div class="form-group">
                             <div class="custom-file">
                                 <input name="file" type="file" class="custom-file-input" id="inputGroupFile02">
                                 <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                             </div>
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="">Upload</span>
-                            </div>
-                            </div>
                         </div>
 						<div class="form-group">
-							<button class="btn btn-success btn-block">
-								SignUp
-							</button>
+							<input type="submit" name="registrar" class="btn btn-success btn-block" value="Guardar datos">
 						</div>
 					</form>
 				</div>
