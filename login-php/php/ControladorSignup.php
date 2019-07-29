@@ -45,7 +45,7 @@
                     //subimos la imagen
 
                     $imagen= $random.'_'.$_FILES["file"]["name"];
-                    if(file_exists("../img/".$random.'_'.$_FILES["file"]["name"])){
+                    if(file_exists("../imgUsers/".$random.'_'.$_FILES["file"]["name"])){
                             echo '<script type="text/javascript">
                             alert("error, la imagen ya existe");
                             window.history.back(-1);
@@ -53,7 +53,7 @@
                         
                     }else{
                         move_uploaded_file($_FILES["file"]["tmp_name"],
-                        "../img/" .$random.'_'.$_FILES["file"]["name"]);
+                        "../imgUsers/" .$random.'_'.$_FILES["file"]["name"]);
                         //echo "Archivo guardado en " . "..//imagenes/" .$random.'_'. $_FILES["imagen"]["name"];
                         //guardamos todo en la bd
                         $Sql="INSERT INTO usuarios (nombre,usuario,clave,imagen) VALUES(
