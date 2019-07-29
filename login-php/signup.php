@@ -27,7 +27,7 @@ require 'componentes/header.php';
 					<h3>signUp</h3>
 				</div>
 				<div class="card-body">
-					<img src="../assets/img/account.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
+					<img src="assets/img/account.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
 					<form action="php/ControladorSignup.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<input type="text" name="nombre" placeholder="Nombre Completo" class="form-control" autofocus="true">

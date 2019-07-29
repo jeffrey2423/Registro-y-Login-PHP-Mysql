@@ -12,7 +12,7 @@ session_start();
         $result = mysqli_query($connection, $verUser);
         $row = mysqli_num_rows($result);
 
-        $fila=$verUser->fetch();
+        $fila=mysqli_fetch_array($result,MYSQLI_NUM);
         $_SESSION['idUsuario']=$fila[0];
         $_SESSION['nombre']=$fila[1];
         $_SESSION['usuario']=$fila[2];

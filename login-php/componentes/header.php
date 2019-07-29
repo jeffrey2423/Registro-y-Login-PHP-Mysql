@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -20,8 +20,8 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="btn btn-primary mr-sm-5 " href="login.php" role="button">Inicia sesion</a>
-      <a class="btn btn-primary " href="signup.php" role="button">Registrate</a>
+      <a class="btn btn-primary mr-sm-5 " href="./login.php" role="button">Inicia sesion</a>
+      <a class="btn btn-primary " href="./signup.php" role="button">Registrate</a>
     </form>
   </div>
 </nav>

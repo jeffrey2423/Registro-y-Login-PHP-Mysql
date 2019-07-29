@@ -21,13 +21,13 @@ require 'componentes/header.php';
 					<h3>signIn</h3>
 				</div>
 				<div class="card-body">
-					<img src="../assets/img/man.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
-					<form action="/signin" method="POST">
+					<img src="assets/img/man.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
+					<form action="php/controladorSignin.php" method="POST">
 						<div class="form-group">
-							<input type="text" name="username" placeholder="Nombre Usuario" class="form-control" >
+							<input type="text" name="usuario" placeholder="Nombre Usuario" class="form-control" >
 						</div>
 						<div class="form-group">
-							<input type="password" name="password" placeholder="Contraseña" class="form-control">
+							<input type="password" name="clave" placeholder="Contraseña" class="form-control">
 						</div>
 						<div class="form-group">
 							<input type="submit" name="login" class="btn btn-success btn-block" value="Iniciar sesion">
