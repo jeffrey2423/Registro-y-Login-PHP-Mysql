@@ -21,7 +21,7 @@ require 'componentes/header.php';
 					<h3>signIn</h3>
 				</div>
 				<div class="card-body">
-					<img src="assets/img/man.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
+					<img src="../assets/img/man.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
 					<form action="/signin" method="POST">
 						<div class="form-group">
 							<input type="text" name="username" placeholder="Nombre Usuario" class="form-control" >
