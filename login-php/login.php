@@ -30,11 +30,7 @@ require 'componentes/header.php';
 							<input type="password" name="password" placeholder="Contraseña" class="form-control">
 						</div>
 						<div class="form-group">
-
-
-							<button class="btn btn-success btn-block">
-								signIn
-							</button>
+							<input type="submit" name="login" class="btn btn-success btn-block" value="Iniciar sesion">
 						</div>
 					</form>
 				</div>

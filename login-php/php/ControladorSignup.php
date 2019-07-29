@@ -7,7 +7,8 @@
     
         $nombre    = $_POST['nombre']; 
         $usuario   = $_POST['usuario']; 
-        $clave     = $_POST['clave'];   
+        $clave     = $_POST['clave'];
+        $claveCrip = md5($clave);   
 
         $verUser = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
         $result = mysqli_query($connection, $verUser);
@@ -58,7 +59,7 @@
                         $Sql="INSERT INTO usuarios (nombre,usuario,clave,imagen) VALUES(
                                 '".$nombre."',
                                 '".$usuario."',
-                                '".$clave."',
+                                '".$claveCrip."',
                                 '".$imagen."')";
                         mysqli_query($connection,$Sql);
                                 echo '<script type="text/javascript">
