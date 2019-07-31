@@ -5,12 +5,12 @@
 // esta funcion elimina el hecho de estar agregando los modelos manualmente
 // by evilnapsis
 
-function __autoload($modelname){
-	if(Model::exists($modelname)){
-		include Model::getFullPath($modelname);
-	} 
-}
 
 
+spl_autoload_register(function($class) {
+	include Model::getFullPath($class);
+});
+
+error_reporting(E_ALL & ~E_DEPRECATED);
 
 ?>

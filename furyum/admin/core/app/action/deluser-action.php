@@ -14,6 +14,6 @@ if($admin->is_admin){
 }else{
 	Core::alert("Error!");
 }
-Core::redir("./logout.php");
+//Core::redir("./logout.php");
 
 ?>
