@@ -11,6 +11,5 @@ spl_autoload_register(function($class) {
 	include Model::getFullPath($class);
 });
 
-error_reporting(E_ALL & ~E_DEPRECATED);
 
 ?>

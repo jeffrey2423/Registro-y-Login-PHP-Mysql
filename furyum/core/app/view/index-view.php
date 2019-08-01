@@ -7,8 +7,15 @@
 <div class="col-md-9">
 
 <h2>Bienvenido a Furyum</h2>
+<?php $admin = UserData::getAdmin();?>
 
-<p class="lead">Te invitamos participar en nuestro foro ...</p>
+
+<p class="lead">Te invitamos participar en nuestro foro, ya seas estudiante o profesor de la Institución Educativa El Diamante</p>
+<p class="lead">Si estas registrado como profesor y necesitas una categoria nueva para interacturar con tus alumnos te puedes comunicar 
+via correo electronico al <?php echo $admin->email;?> para que el administrador del foro cree la respectiva categoria</p>
+<p class="lead">Vamos a compartir el conocimiento!</p>
+
+
 
 <?php 
 $cats = CategoryData::getAll();

@@ -2,7 +2,7 @@
 class UserData {
 	public static $tablename = "user";
 
-	public function UserData(){
+	public function __constructor(){
 		$this->name = "";
 		$this->lastname = "";
 		$this->username = "";
@@ -56,6 +56,12 @@ class UserData {
 
 	public static function getByEmail($id){
 		$sql = "select * from ".self::$tablename." where email=\"$id\"";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new UserData());
+	}
+
+	public static function getAdmin(){
+		$sql = "select * from ".self::$tablename." where kind= 1";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new UserData());
 	}

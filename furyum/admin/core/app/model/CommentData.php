@@ -3,7 +3,7 @@ class CommentData {
 	public static $tablename = "comment";
 
 
-	public function CommentData(){
+	public function __constructor(){
 		$this->name = "";
 		$this->lastname = "";
 		$this->email = "";
