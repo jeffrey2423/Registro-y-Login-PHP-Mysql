@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="favicon.ico" />
 <?php
 $debug= true;
 if($debug){
