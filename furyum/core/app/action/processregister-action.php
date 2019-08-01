@@ -14,7 +14,7 @@ if(isset($_POST)){
 		Core::alert("Correcto, ahora puedes iniciar sesion!");
 		Core::redir("./?view=login");
 	}else{
-		Core::alert("Error!");
+		Core::alert("Error! el email ya se encuentra registrado");
 		Core::redir("./?view=register");
 	}
 

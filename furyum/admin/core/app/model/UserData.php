@@ -2,7 +2,7 @@
 class UserData {
 	public static $tablename = "user";
 
-	public function __constructor(){
+	public function __construct(){
 		$this->name = "";
 		$this->lastname = "";
 		$this->username = "";
@@ -10,6 +10,7 @@ class UserData {
 		$this->is_active = "0";
 		$this->created_at = "NOW()";
 	}
+	//public static $obj = new UserData(); 
 
 	public function add(){
 		$sql = "insert into ".self::$tablename." (name,lastname,email,username,password,status,kind,created_at) ";
