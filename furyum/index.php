@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <link rel="shortcut icon" href="favicon.ico" />
 <?php
 $debug= true;
@@ -8,11 +12,8 @@ error_reporting(E_ALL);
 }else{
 error_reporting(0);	
 }
-
-
 include "core/autoload.php";
-ob_start();
-session_start();
+
 
 // si quieres que se muestre las consultas SQL debes decomentar la siguiente linea
 // Core::$debug_sql = true;
@@ -20,5 +21,4 @@ session_start();
 
 $lb = new Lb();
 $lb->start();
-
 ?>

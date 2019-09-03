@@ -1,4 +1,4 @@
-<div class="container">
+﻿<div class="container">
 
 	<div class="row">
 		<div class="col-md-12">
@@ -7,12 +7,12 @@
 				<div class="row">
 				<div class="col-md-9">
 
-				<h2>Bienvenido a Furyum</h2>
+				<h2><B>Bienvenido al Foro Institucional IEO El Diamante</B></h2>
 				<?php $admin = UserData::getAdmin();?>
 
 
-				<p class="lead">Te invitamos participar en nuestro foro, ya seas estudiante o profesor de la Institución Educativa El Diamante</p>
-				<p class="lead">Si estas registrado como profesor y necesitas una categoria nueva para interacturar con tus alumnos te puedes comunicar 
+				<p class="lead">Te invitamos participar en nuestro foro, ya seas estudiante o profesor de la <B>Institución Educativa El Diamante</B></p>
+				<p class="lead">Si estas registrado como profesor y necesitas una categoria nueva para interacturar con tus estudiantes te puedes comunicar 
 				via correo electronico al <?php echo $admin->email;?> para que el administrador del foro cree la respectiva categoria</p>
 				<p class="lead">Vamos a compartir el conocimiento!</p>
 				
@@ -41,7 +41,7 @@
 				</div>
 
 				<div class="col-6"><br>	
-				<img src="https://www.ieeldiamante.edu.co/img/Institucion_Educativa_El_Diamante.png" alt="">
+				<a href="../../"><img src="img/escuddi.png" alt=""></a>
 				</div>
 
 
