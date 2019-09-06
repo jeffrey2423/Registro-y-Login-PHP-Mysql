@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2019 at 05:35 PM
+-- Generation Time: Sep 06, 2019 at 11:52 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -97,8 +97,10 @@ CREATE TABLE `sede` (
 --
 
 INSERT INTO `sede` (`id_sede`, `nombre_sede`) VALUES
-(1, 'Sede Principal'),
-(2, 'Sede Juan Pablo II');
+(1, 'Sede Principal Jornada Mañana'),
+(2, 'Sede Juan Pablo II Jornada Mañana'),
+(3, 'Sede Principal Jornada Tarde'),
+(4, 'Sede Juan Pablo II Jornada Tarde');
 
 -- --------------------------------------------------------
 
@@ -129,7 +131,9 @@ INSERT INTO `user` (`id`, `name`, `lastname`, `username`, `email`, `password`, `
 (7, 'jeff', 'c', 'ccc', 'jeffrey@correo.com', '123', 'CierLH.jpg', 1, 0, '2019-08-01 07:58:52', 1),
 (10, 'jhhj', 'hjhjhj', NULL, 'hjhj@jhjh.co', '6874a8ced7a2a74d1a62197c48986500f685c82e', NULL, 1, 3, '2019-08-01 11:30:54', 2),
 (12, 'prueba', 'prueba', NULL, 'prueba@prueba.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 3, '2019-08-01 11:44:17', 2),
-(13, '11111', '11111', '1111111', '11111@111.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 1, '2019-08-01 12:03:11', 2);
+(13, '11111', '11111', '1111111', '11111@111.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 1, '2019-08-01 12:03:11', 3),
+(14, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2),
+(15, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2);
 
 --
 -- Indexes for dumped tables
@@ -196,13 +200,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `sede`
 --
 ALTER TABLE `sede`
-  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
