@@ -6,7 +6,11 @@ require './php/conexionBD.php';
         require 'chooser.php';
         ?>
     </div>
-<div class="card-deck my-5 " id="card-deck">
+
+    
+
+    
+<div id="card-deck">
     <?php
     /*$articulosXpagina = 3;
 
@@ -32,6 +36,7 @@ require './php/conexionBD.php';
     ?>
 
 </div>
+
 
 <div class="card-footer">
       <?php
