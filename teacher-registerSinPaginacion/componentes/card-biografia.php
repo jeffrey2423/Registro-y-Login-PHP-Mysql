@@ -36,10 +36,3 @@ require './php/conexionBD.php';
     ?>
 
 </div>
-
-
-<div class="card-footer">
-      <?php
-        //require 'paginacion.php';
-      ?>
-</div>
