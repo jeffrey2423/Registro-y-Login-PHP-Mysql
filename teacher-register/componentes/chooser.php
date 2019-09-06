@@ -3,9 +3,17 @@
         <label class="input-group-text" for="inputGroupSelect01">Filtrar por sedes</label>
     </div>
     <select class="custom-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+        <?php
+            $query="SELECT * FROM sede"; 
+            $execute=mysqli_query($connection,$query);
+            
+            while ($result=mysqli_fetch_array($execute)) { 
+
+        ?>
+            <option value="<?php echo $result['id_sede']; ?>"><?php echo $result['nombre_sede']; ?></option>
+        <?php 
+            }
+        ?>
+
     </select>
 </div>
