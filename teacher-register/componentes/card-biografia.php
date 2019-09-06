@@ -25,6 +25,7 @@ require './php/conexionBD.php';
      
      $iniciar = ($_GET['pagina']-1)*$articulosXpagina;
 
+     
      $queryLimit="SELECT * FROM user LIMIT $iniciar,$articulosXpagina"; 
      $executeLimit=mysqli_query($connection,$queryLimit);
 
