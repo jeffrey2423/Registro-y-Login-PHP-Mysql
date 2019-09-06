@@ -1,20 +1,25 @@
 <?php
 require './php/conexionBD.php';
 ?>
-
+    <div class="card-title">
+        <?php
+        require 'chooser.php';
+        ?>
+    </div>
 <div class="card-deck my-5" style="">
     <?php
-    $articulosXpagina = 1;
+    $articulosXpagina = 3;
 
     $query="SELECT * FROM user";
     
     $execute=mysqli_query($connection,$query);
     $filas =  mysqli_num_rows($execute);
+    $paginas = ceil($filas/$articulosXpagina);
 
      if(!$_GET){
          header('Location:index.php?pagina=1');
      }
-     if($_GET['pagina']>$filas){
+     if($_GET['pagina']>$paginas || $_GET['pagina']<=0 ){
         header('Location:index.php?pagina=1');
      }
      
@@ -44,4 +49,10 @@ require './php/conexionBD.php';
     <?php     
         }
     ?> 
+</div>
+
+<div class="card-footer">
+      <?php
+        require 'paginacion.php';
+      ?>
 </div>

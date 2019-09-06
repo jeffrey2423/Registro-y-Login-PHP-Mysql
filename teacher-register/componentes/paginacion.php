@@ -1,17 +1,3 @@
-<?php 
-    require './php/conexionBD.php';
-
-    $articulosXpagina = 1;
-
-    $query="SELECT * FROM user";
-    
-    $execute=mysqli_query($connection,$query);
-    $filas =  mysqli_num_rows($execute);
-    $paginas = ceil($filas/$articulosXpagina);
-
-    
-
-?>
 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
@@ -25,6 +11,6 @@
         endfor
     ?>
 
-    <li class="page-item <?php if ($_GET['pagina']>=$filas) {echo 'disabled';}else{ echo '';} ?>"><a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1?>">Siguiente</a></li>
+    <li class="page-item <?php if ($_GET['pagina']>=$paginas) {echo 'disabled';}else{ echo '';} ?>"><a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1?>">Siguiente</a></li>
   </ul>
 </nav>
