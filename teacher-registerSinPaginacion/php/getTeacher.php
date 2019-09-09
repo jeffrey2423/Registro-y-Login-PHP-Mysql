@@ -20,7 +20,7 @@
         while ($result=mysqli_fetch_assoc($executeLimit)) { 
 
            $html .= '
-           <div class="card my-3" style="max-width: 350px; height:400 ; display: inline-block;">
+           <div class="card my-3" style="max-width: 338px; height:370 ; display: inline-block;">
                 <img src="https://www.jennstrends.com/wp-content/uploads/2013/10/bad-profile-pic-2-768x768.jpeg" class="card-img-top"  alt="">
                 <div class="card-body">
                     <h5 class="card-title">'.$result['name'].'</h5>

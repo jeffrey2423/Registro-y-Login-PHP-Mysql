@@ -11,7 +11,7 @@
 <body>
 
     <?php
-        require 'componentes/navbar.php';
+        //require 'componentes/navbar.php';
     ?>
 
     <div class="container my-5">
