@@ -41,7 +41,7 @@
         $html .= '<div class="card text-center" >
         <div class="card-body">
             <h5 class="card-title">No hay resultados</h5>
-            <p class="card-text">No hay profesores registrados en esa jornada o sede.</p>
+            <p class="card-text">No hay docentes registrados en esa jornada o sede.</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Estamos trabajando en ello</small>
