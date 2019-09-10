@@ -10,6 +10,6 @@ require './php/conexionBD.php';
     
 
     
-<div id="card-deck" style="">
+<div id="card-deck" style=" padding: 20px;">
 
 </div>

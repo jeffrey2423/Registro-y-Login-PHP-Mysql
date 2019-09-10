@@ -14,7 +14,7 @@
         require 'componentes/navbar.php';
     ?>
 
-    <div class="container-fluid my-3">
+    <div class="container my-3">
         <?php
             require 'componentes/taps-navegacion.php';
         ?>
