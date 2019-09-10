@@ -20,8 +20,8 @@
         while ($result=mysqli_fetch_assoc($executeLimit)) { 
 
            $html .= '
-           <div class="card my-3" style="max-width: 355px; max-height:370 ; display: inline-block;">
-                <img src="https://www.jennstrends.com/wp-content/uploads/2013/10/bad-profile-pic-2-768x768.jpeg" class="card-img-top"  alt="">
+           <div class="card my-3" style="max-width: 380px; display: inline-block;">
+                <img src="https://www.jennstrends.com/wp-content/uploads/2013/10/bad-profile-pic-2-768x768.jpeg" class="card-img-top"  alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">'.$result['name'].'</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

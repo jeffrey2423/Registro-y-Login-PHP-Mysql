@@ -14,7 +14,7 @@
         require 'componentes/navbar.php';
     ?>
 
-    <div class="container my-3 " style="max-width: 63%;">
+    <div class="container-fluid my-3">
         <?php
             require 'componentes/taps-navegacion.php';
         ?>
