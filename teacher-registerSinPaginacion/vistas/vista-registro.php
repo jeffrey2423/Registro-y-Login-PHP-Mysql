@@ -1,7 +1,6 @@
 <?php
         require '../componentes/header.php';
         require '../componentes/navbar.php';
-        require '../componentes/footer.php';
 ?>
 <div class="container my-3">
             <div class="card mb-3" >
