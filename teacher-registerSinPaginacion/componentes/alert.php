@@ -5,4 +5,4 @@
           <span aria-hidden="true">&times;</span>
         </button>
     </div>
-<?php session_unset(); } ?>
+<?php unset($_SESSION['message']); unset($_SESSION['message_type']); } ?>

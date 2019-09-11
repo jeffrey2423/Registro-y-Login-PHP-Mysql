@@ -56,15 +56,17 @@
                                 '".$claveCrip."',
                                 '".$imagen."')";
                         mysqli_query($connection,$Sql);
-                                echo '<script type="text/javascript">
-                            alert("Se ha Registrado Correctamente");
-                            window.history.back(-1);
-                            </script>';
+                        $_SESSION['message'] = 'Se ha registrado con exito, tambien podra usar el foro institucional';
+                        $_SESSION['message_type'] = 'success';
+                        unset($_SESSION['nombre']);
+                        header('Location: ../vistas/vista-registro.php');
+                            
                     }
                 }
             }else{
-                $_SESSION['message'] = 'Task Removed Successfully';
+                $_SESSION['message'] = 'Error, formato de imagen no soportado';
                 $_SESSION['message_type'] = 'danger';
+                $_SESSION['nombre'] = $nombre;
                 header('Location: ../vistas/vista-registro.php');
             
             }

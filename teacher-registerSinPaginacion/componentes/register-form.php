@@ -2,7 +2,7 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" >
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php if (isset($_SESSION['nombre'])){ echo $_SESSION['nombre']; } ?>">
     </div>
     <div class="form-group col-md-6">
       <label for="apellido">Apellido</label>
