@@ -3,7 +3,7 @@
         <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01">Sedes</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01" name="inputGroupSelect01">
+        <select class="custom-select" id="inputGroupSelect01" name="inputGroupSelect01" required>
         <option value="0">Selecciona una sede</option>
             <?php
                 $query="SELECT * FROM sede"; 

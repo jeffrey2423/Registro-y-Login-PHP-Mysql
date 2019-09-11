@@ -1,7 +1,13 @@
 <?php
+        require '../php/conexionBD.php';
         require '../componentes/header.php';
         require '../componentes/navbar.php';
 ?>
+<div class="container">
+    <?php
+            require '../componentes/alert.php';
+    ?>
+</div>
 <div class="container my-3">
             <div class="card mb-3" >
 

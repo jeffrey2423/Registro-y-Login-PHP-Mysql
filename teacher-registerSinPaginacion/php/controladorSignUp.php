@@ -1,10 +1,10 @@
 <?php
-    require 'database.php';
+    require 'conexionBD.php';
     if (isset($_POST['registrar'])) {
     
         $nombre    = $_POST['nombre']; 
-        $usuario   = $_POST['usuario']; 
-        $clave     = $_POST['clave'];
+        $usuario   = $_POST['apellido']; 
+        $clave     = $_POST['email'];
         $claveCrip = md5($clave);
         
         $verUser = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
@@ -63,10 +63,9 @@
                     }
                 }
             }else{
-                            echo '<script type="text/javascript">
-                            alert("error, formato no soportado");
-                            window.history.back(-1);
-                            </script>';
+                $_SESSION['message'] = 'Task Removed Successfully';
+                $_SESSION['message_type'] = 'danger';
+                header('Location: ../vistas/vista-registro.php');
             
             }
       }

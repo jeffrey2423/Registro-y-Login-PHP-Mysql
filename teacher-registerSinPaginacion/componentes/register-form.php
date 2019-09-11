@@ -2,16 +2,16 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" >
     </div>
     <div class="form-group col-md-6">
       <label for="apellido">Apellido</label>
-      <input type="texts" class="form-control" id="apellido" placeholder="Apellido">
+      <input type="texts" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
     </div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="Email">
+    <input type="email" class="form-control" id="email" name="email"  placeholder="Email">
   </div>
   <div class="form-group">
     <label for="clave">clave</label>
@@ -45,5 +45,5 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Registrarse</button>
+  <button type="submit" name="registrar" class="btn btn-primary">Registrarse</button>
 </form>
