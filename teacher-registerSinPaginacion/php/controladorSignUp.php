@@ -1,7 +1,6 @@
 <?php
     require 'database.php';
     if (isset($_POST['registrar'])) {
-        $mensaje = "";
     
         $nombre    = $_POST['nombre']; 
         $usuario   = $_POST['usuario']; 

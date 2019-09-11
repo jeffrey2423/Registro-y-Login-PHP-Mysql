@@ -1,37 +1,47 @@
-<form>
+<form action="../php/ControladorSignup.php" method="POST" enctype="multipart/form-data">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="apellido">Apellido</label>
+      <input type="texts" class="form-control" id="apellido" placeholder="Apellido">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="clave">clave</label>
+    <input type="password" class="form-control" id="clave" placeholder="Clave">
   </div>
+  <div class="form-group">
+    <label for="clave2">Confimar clave</label>
+    <input type="password" class="form-control" id="clave2" placeholder="Confirmar clave">
+  </div>
+  <div class="form-group">
+    <label for="chooser">Seleccionar imagen</label>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="chooser" name="file" lang="es">
+      <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+    </div>
+  </div>
+  <div class="form-group">
+  <label for="area">Descripcion personal</label>
+    <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Descripcion personal</span>
+          </div>
+          <textarea name="area" id="area" class="form-control" aria-label="With textarea"></textarea>
+    </div>
+  </div>
+
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+      <label for="sede">Seleccionar sede</label>
+      <?php require('chooser.php'); ?>
     </div>
   </div>
 

@@ -1,7 +1,7 @@
 <div class="form-row">
     <div class="input-group col-mb-6">
         <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Filtrar por sedes</label>
+        <label class="input-group-text" for="inputGroupSelect01">Sedes</label>
         </div>
         <select class="custom-select" id="inputGroupSelect01" name="inputGroupSelect01">
         <option value="0">Selecciona una sede</option>
