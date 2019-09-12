@@ -16,6 +16,15 @@
   </div>
 </nav>
 
+<script>
+
+$( '#navbarNav .navbar-nav a' ).on( 'click', function () {
+	$( '#navbarNav .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});
+
+</script>
+
 <?php
 if(isset($_GET['render'])){ 
   switch($_GET['render']){
