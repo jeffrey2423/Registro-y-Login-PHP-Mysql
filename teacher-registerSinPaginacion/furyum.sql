@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 06, 2019 at 11:52 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 12-09-2019 a las 05:37:39
+-- Versión del servidor: 10.3.16-MariaDB
+-- Versión de PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `furyum`
+-- Base de datos: `furyum`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- Estructura de tabla para la tabla `category`
 --
 
 CREATE TABLE `category` (
@@ -35,7 +35,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `category`
+-- Volcado de datos para la tabla `category`
 --
 
 INSERT INTO `category` (`id`, `name`, `description`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `category` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Estructura de tabla para la tabla `comment`
 --
 
 CREATE TABLE `comment` (
@@ -59,7 +59,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post`
+-- Estructura de tabla para la tabla `post`
 --
 
 CREATE TABLE `post` (
@@ -75,7 +75,7 @@ CREATE TABLE `post` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `post`
+-- Volcado de datos para la tabla `post`
 --
 
 INSERT INTO `post` (`id`, `title`, `brief`, `content`, `image`, `created_at`, `status`, `category_id`, `user_id`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `post` (`id`, `title`, `brief`, `content`, `image`, `created_at`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sede`
+-- Estructura de tabla para la tabla `sede`
 --
 
 CREATE TABLE `sede` (
@@ -93,7 +93,7 @@ CREATE TABLE `sede` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sede`
+-- Volcado de datos para la tabla `sede`
 --
 
 INSERT INTO `sede` (`id_sede`, `nombre_sede`) VALUES
@@ -105,7 +105,7 @@ INSERT INTO `sede` (`id_sede`, `nombre_sede`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Estructura de tabla para la tabla `user`
 --
 
 CREATE TABLE `user` (
@@ -118,35 +118,39 @@ CREATE TABLE `user` (
   `image` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT 1,
   `kind` int(11) DEFAULT 1,
-  `created_at` datetime DEFAULT NULL,
-  `sede_id` int(11) DEFAULT NULL
+  `created_at` datetime DEFAULT current_timestamp(),
+  `sede_id` int(11) DEFAULT NULL,
+  `descripcion` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `lastname`, `username`, `email`, `password`, `image`, `status`, `kind`, `created_at`, `sede_id`) VALUES
-(1, 'Administrator', 'admin', 'admin', 'correoadmin@correo.com', '90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad', NULL, 1, 1, '2019-07-31 13:52:47', 1),
-(7, 'jeff', 'c', 'ccc', 'jeffrey@correo.com', '123', 'CierLH.jpg', 1, 0, '2019-08-01 07:58:52', 1),
-(10, 'jhhj', 'hjhjhj', NULL, 'hjhj@jhjh.co', '6874a8ced7a2a74d1a62197c48986500f685c82e', NULL, 1, 3, '2019-08-01 11:30:54', 2),
-(12, 'prueba', 'prueba', NULL, 'prueba@prueba.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 3, '2019-08-01 11:44:17', 2),
-(13, '11111', '11111', '1111111', '11111@111.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 1, '2019-08-01 12:03:11', 3),
-(14, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2),
-(15, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2);
+INSERT INTO `user` (`id`, `name`, `lastname`, `username`, `email`, `password`, `image`, `status`, `kind`, `created_at`, `sede_id`, `descripcion`) VALUES
+(1, 'Administrator', 'admin', 'admin', 'correoadmin@correo.com', '90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad', NULL, 1, 1, '2019-07-31 13:52:47', 1, ''),
+(7, 'jeff', 'c', 'ccc', 'jeffrey@correo.com', '123', 'CierLH.jpg', 1, 0, '2019-08-01 07:58:52', 1, ''),
+(10, 'jhhj', 'hjhjhj', NULL, 'hjhj@jhjh.co', '6874a8ced7a2a74d1a62197c48986500f685c82e', NULL, 1, 3, '2019-08-01 11:30:54', 2, ''),
+(12, 'prueba', 'prueba', NULL, 'prueba@prueba.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 3, '2019-08-01 11:44:17', 2, ''),
+(13, '11111', '11111', '1111111', '11111@111.com', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, 1, 1, '2019-08-01 12:03:11', 3, ''),
+(14, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2, ''),
+(15, 'gffgfgfg', 'gffgfgfgfg', 'gffgfggfg', 'fgfgfgfgf', 'gffgfgf', 'gffgfg', 1, 1, NULL, 2, ''),
+(16, 'hhh', 'jhhjhj', NULL, 'hjhjhj@hjhj.com', '4124bc0a9335c27f086f24ba207a4912', '161751_images2.jpg', 1, 1, NULL, 2, 'prueba'),
+(17, 'jhhjhj', 'jhhjhj', NULL, 'hjhjkkhj@hjhj.com', '4124bc0a9335c27f086f24ba207a4912', '92533_images2.jpg', 1, 1, NULL, 4, 'prueba'),
+(18, 'jhhjhj', 'jhhjhj', NULL, 'hSSSjhjhj@hjhj.com', '3b98e2dffc6cb06a89dcb0d5c60a0206', '382975_images2.jpg', 1, 1, '2019-09-11 22:35:58', 3, 'SDFDFDF');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `category`
+-- Indices de la tabla `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `comment`
+-- Indices de la tabla `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
@@ -154,7 +158,7 @@ ALTER TABLE `comment`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `post`
+-- Indices de la tabla `post`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id`),
@@ -162,72 +166,72 @@ ALTER TABLE `post`
   ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `sede`
+-- Indices de la tabla `sede`
 --
 ALTER TABLE `sede`
   ADD PRIMARY KEY (`id_sede`);
 
 --
--- Indexes for table `user`
+-- Indices de la tabla `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_sede` (`sede_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT de la tabla `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `post`
+-- AUTO_INCREMENT de la tabla `post`
 --
 ALTER TABLE `post`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `sede`
+-- AUTO_INCREMENT de la tabla `sede`
 --
 ALTER TABLE `sede`
   MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `comment`
+-- Filtros para la tabla `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`),
   ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Constraints for table `post`
+-- Filtros para la tabla `post`
 --
 ALTER TABLE `post`
   ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `post_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 --
--- Constraints for table `user`
+-- Filtros para la tabla `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `FK_sede` FOREIGN KEY (`sede_id`) REFERENCES `sede` (`id_sede`);
