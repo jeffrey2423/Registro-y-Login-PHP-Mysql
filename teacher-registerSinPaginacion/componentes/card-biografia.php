@@ -1,7 +1,4 @@
-<?php
-require './php/conexionBD.php';
-?>
-    <div class="card-title">
+<div class="card-title">
         <?php
         require 'chooser.php';
         ?>

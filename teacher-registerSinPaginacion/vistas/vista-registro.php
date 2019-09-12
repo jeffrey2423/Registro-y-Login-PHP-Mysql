@@ -1,5 +1,5 @@
 <?php
-        require '../php/conexionBD.php';
+    require '../php/conexionBD.php';
 ?>
 
 <!DOCTYPE html>
