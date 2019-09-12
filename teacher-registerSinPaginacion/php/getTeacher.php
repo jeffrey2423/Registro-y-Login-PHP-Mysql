@@ -6,7 +6,7 @@
      //$articulosXpagina = 3;
      //$iniciar = ($_GET['pagina']-1)*3;
 
-     $queryLimit="SELECT user.name, user.lastname, user.image, user.email, user.descripcion, user.created_at, sede.nombre_sede FROM user INNER JOIN sede ON user.sede_id = sede.id_sede WHERE user.sede_id = '$id_sede'";
+     $queryLimit="SELECT user.name, user.lastname, user.image, user.email, user.descripcion, user.created_at, sede.nombre_sede FROM user INNER JOIN sede ON user.sede_id = sede.id_sede WHERE user.sede_id = '$id_sede' AND user.teacher = 1";
 
      $executeLimit=mysqli_query($connection,$queryLimit);
      $filas =  mysqli_num_rows($executeLimit);

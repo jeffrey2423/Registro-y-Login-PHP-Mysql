@@ -11,6 +11,7 @@
         $select     = $_POST['inputGroupSelect01'];
         $file     = $_FILES["file"]["name"];
         $claveCrip = md5($clave);
+        $teacher = 1;
 
         $_SESSION['nombre'] = $nombre;
         $_SESSION['apellido'] = $apellido;
@@ -67,14 +68,15 @@
                                         //echo "Archivo guardado en " . "..//imagenes/" .$random.'_'. $_FILES["imagen"]["name"];
 
                                         //guardamos todo en la bd
-                                        $Sql="INSERT INTO user (name,lastname,email,password,image,sede_id,descripcion) VALUES(
+                                        $Sql="INSERT INTO user (name,lastname,email,password,image,sede_id,descripcion,teacher) VALUES(
                                                 '".$nombre."',
                                                 '".$apellido."',
                                                 '".$email."',
                                                 '".$claveCrip."',
                                                 '".$imagen."',
                                                 '".$select."',
-                                                '".$area."')";
+                                                '".$area."',
+                                                '".$teacher."')";
 
 
                                         mysqli_query($connection,$Sql);

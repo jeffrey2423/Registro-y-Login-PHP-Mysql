@@ -4,7 +4,7 @@
     <div class="card-body">
       <div class="tab-content">
         <div class="tab-pane active" id="biografia" >
-          <img src="https://tubikstudio.com/wp-content/uploads/2016/12/social_network_animation_tubik_studio.gif" height="auto" width="auto" class="card-img-top mb-3" alt="...">
+          <img src="./public/img/card.gif" height="auto" width="auto" class="card-img-top mb-3" alt="...">
           <?php
               require 'card-biografia.php';
           ?>

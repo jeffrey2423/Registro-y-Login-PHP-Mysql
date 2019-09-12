@@ -4,9 +4,6 @@
         ?>
     </div>
 
-    
-
-    
 <div id="card-deck" style=" padding: 20px;">
 
 </div>

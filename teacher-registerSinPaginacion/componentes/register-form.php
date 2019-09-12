@@ -1,4 +1,4 @@
-<form action="../php/ControladorSignup.php" method="POST" enctype="multipart/form-data">
+<form action="../php/controladorSignUp.php" method="POST" enctype="multipart/form-data">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="nombre">Nombre</label>
