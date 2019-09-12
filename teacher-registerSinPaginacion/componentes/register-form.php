@@ -6,20 +6,20 @@
     </div>
     <div class="form-group col-md-6">
       <label for="apellido">Apellido</label>
-      <input type="texts" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+      <input type="texts" class="form-control" id="apellido" name="apellido" placeholder="Apellido" value="<?php if (isset($_SESSION['apellido'])){ echo $_SESSION['apellido']; } ?>">
     </div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" name="email"  placeholder="Email">
+    <input type="email" class="form-control" id="email" name="email"  placeholder="Email" value="<?php if (isset($_SESSION['email'])){ echo $_SESSION['email']; } ?>">
   </div>
   <div class="form-group">
     <label for="clave">clave</label>
-    <input type="password" class="form-control" id="clave" placeholder="Clave">
+    <input type="password" class="form-control" id="clave" name="clave" placeholder="Clave" value="<?php if (isset($_SESSION['clave'])){ echo $_SESSION['clave']; } ?>">
   </div>
   <div class="form-group">
     <label for="clave2">Confimar clave</label>
-    <input type="password" class="form-control" id="clave2" placeholder="Confirmar clave">
+    <input type="password" class="form-control" id="clave2" name="clave2" placeholder="Confirmar clave" value="<?php if (isset($_SESSION['clave2'])){ echo $_SESSION['clave2']; } ?>">
   </div>
   <div class="form-group">
     <label for="chooser">Seleccionar imagen</label>
@@ -34,7 +34,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">Descripcion personal</span>
           </div>
-          <textarea name="area" id="area" class="form-control" aria-label="With textarea"></textarea>
+          <textarea name="area" id="area" class="form-control" aria-label="With textarea"><?php if (isset($_SESSION['area'])){ echo $_SESSION['area']; } ?></textarea>
     </div>
   </div>
 

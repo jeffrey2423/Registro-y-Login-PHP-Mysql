@@ -7,11 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="./teacher-registerSinPaginacion/index.php">Biografias <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo basename($_SERVER['PHP_SELF']);?>?render=biografia">Biografias <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./vistas/vista-registro.php">Registro Docentes</a>
+        <a class="nav-link" href="<?php echo basename($_SERVER['PHP_SELF']);?>?render=registro">Registro Docentes</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<?php
+if(isset($_GET['render'])){ 
+  switch($_GET['render']){
+      case "biografia": header('Location: ../index.php'); break;
+      case "registro":  header('Location: ../vistas/vista-registro.php');  break;
+      default: header('Location: ../index.php'); break;
+  }
+}
+?>

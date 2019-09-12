@@ -21,7 +21,7 @@
 
            $html .= '
            <div class="card my-3" style="max-width: 20rem; display: inline-block; margin-right:5px;">
-                <img src="../public/img/'.$result['image'].'" class="card-img-top"  alt="Card image cap">
+                <img src="./public/img/'.$result['image'].'" class="card-img-top"  alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">'.$result['name'].' '.$result['lastname'].'</h5>
                     <p class="card-text">'.$result['email'].'</p>
