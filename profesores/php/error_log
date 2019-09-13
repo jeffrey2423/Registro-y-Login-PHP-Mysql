@@ -1,0 +1,1 @@
+[12-Sep-2019 11:59:43 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/wwweldiamantecom/public_html/profesores/php/getTeacher.php on line 12
