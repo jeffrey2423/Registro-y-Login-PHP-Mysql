@@ -17,23 +17,24 @@
         $_SESSION['apellido'] = $apellido;
         $_SESSION['email'] = $email;
         $_SESSION['area'] = $area;
+
         
         $verUser = "SELECT * FROM docente WHERE email = '$email'";
         $result = mysqli_query($connection, $verUser);
         $row = mysqli_num_rows($result);
 
-        //if($nombre != "" || $apellido != "" || $email != "" || $clave != "" || $clave2 != "" || $area != "" ){ 
+        if($nombre != "" || $apellido != "" || $email != "" || $clave != "" || $clave2 != "" || $area != "" ){ 
 
-            //if($clave == $clave2){
+            if($clave == $clave2){
                 
                 if($file != ""){
 
-                    //if($select != "0"){ 
+                    if($select != "0"){ 
 
                         if($row > 0){
                             $_SESSION['message'] = 'Error, El email ya esta, por favor intenta con otro';
                             $_SESSION['message_type'] = 'danger';
-                            header('Location: ../vistas/vista-registro.php');
+                            header('Location: ../index.php');
                         }else{
                             $allowedExts = array("gif", "jpeg", "jpg", "png");
                             $temp = explode(".", $_FILES["file"]["name"]);
@@ -51,14 +52,14 @@
                                     //verificamos que venga algo en el input file
                                     $_SESSION['message'] = 'Error, algo ocurre, por favor intenta nuevamente';
                                     $_SESSION['message_type'] = 'danger';
-                                    header('Location: ../vistas/vista-registro.php');
+                                    header('Location: ../index.php');
                                 }else{
                                     //subimos la imagen
                                     $imagen= $random.'_'.$_FILES["file"]["name"];
                                     if(file_exists("../../public/img/".$random.'_'.$_FILES["file"]["name"])){
                                         $_SESSION['message'] = 'Error, la imagen ya esta, por favor intenta con otra';
                                         $_SESSION['message_type'] = 'danger';
-                                        header('Location: ../vistas/vista-registro.php');
+                                        header('Location: ../index.php');
                                         
                                     }else{
                                         move_uploaded_file($_FILES["file"]["tmp_name"],
@@ -94,27 +95,27 @@
                     
                             }
                         }
-                    /*}else{
+                    }else{
                         $_SESSION['message'] = 'Error, no ha seleccionado la sede';
                         $_SESSION['message_type'] = 'danger';
-                        header('Location: ../vistas/vista-registro.php');
-                    }*/ 
+                        header('Location: ../index.php');
+                    }
                 }else{
                     $_SESSION['message'] = 'Error, no ha seleccionado la imagen';
                     $_SESSION['message_type'] = 'danger';
-                    header('Location: ../vistas/vista-registro.php');
+                    header('Location: ../index.php');
                 }   
                 
-            /*}else{
+            }else{
                 $_SESSION['message'] = 'Error, Las claves no coinciden';
                 $_SESSION['message_type'] = 'danger';
-                header('Location: ../vistas/vista-registro.php');
-            }*/
-        /*}else{
+                header('Location: ../index.php');
+            }
+        }else{
             $_SESSION['message'] = 'Error, todos los campos son obligatorios';
             $_SESSION['message_type'] = 'danger';
-            header('Location: ../vistas/vista-registro.php');
-        }*/
+            header('Location: ../index.php');
+        }
 
     }
 ?>

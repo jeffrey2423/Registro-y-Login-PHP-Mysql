@@ -22,13 +22,13 @@
         $result = mysqli_query($connection, $verUser);
         $row = mysqli_num_rows($result);
 
-        //if($nombre != "" || $apellido != "" || $email != "" || $clave != "" || $clave2 != "" || $area != "" ){ 
+        if($nombre != "" || $apellido != "" || $email != "" || $clave != "" || $clave2 != "" || $area != "" ){ 
 
-            //if($clave == $clave2){
+            if($clave == $clave2){
                 
                 if($file != ""){
 
-                    //if($select != "0"){ 
+                    if($select != "0"){ 
 
                         if($row > 0){
                             $_SESSION['message'] = 'Error, El email ya esta, por favor intenta con otro';
@@ -94,27 +94,27 @@
                     
                             }
                         }
-                    /*}else{
+                    }else{
                         $_SESSION['message'] = 'Error, no ha seleccionado la sede';
                         $_SESSION['message_type'] = 'danger';
                         header('Location: ../vistas/vista-registro.php');
-                    }*/ 
+                    }
                 }else{
                     $_SESSION['message'] = 'Error, no ha seleccionado la imagen';
                     $_SESSION['message_type'] = 'danger';
                     header('Location: ../vistas/vista-registro.php');
                 }   
                 
-            /*}else{
+            }else{
                 $_SESSION['message'] = 'Error, Las claves no coinciden';
                 $_SESSION['message_type'] = 'danger';
                 header('Location: ../vistas/vista-registro.php');
-            }*/
-        /*}else{
+            }
+        }else{
             $_SESSION['message'] = 'Error, todos los campos son obligatorios';
             $_SESSION['message_type'] = 'danger';
             header('Location: ../vistas/vista-registro.php');
-        }*/
+        }
 
     }
 ?>

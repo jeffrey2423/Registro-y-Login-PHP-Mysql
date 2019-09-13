@@ -18,17 +18,17 @@
           docente.email, docente.descripcion, docente.created_at, sede.nombre_sede FROM docente INNER JOIN sede ON docente.sede_id = sede.id_sede";
 
           $result_tasks = mysqli_query($connection, $query);    
-          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+          while($row = mysqli_fetch_array($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['lastname']; ?></td>
-            <td><img src="../../../public/img/<?php echo $row['image']; ?>" class="card-img-top"  alt="Card image cap"></td>
+            <td><a><img src="../../public/img/<?php echo $row['image']; ?>" class="card-img-top"  alt="Card image cap"></a></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['descripcion']; ?></td>
             <td><?php echo $row['created_at']; ?></td>
             <td><?php echo $row['nombre_sede']; ?></td>
             <td>
-              <a href="admin/controller/editTeacher.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <a href="./vistas/update.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
               <a href="./controller/deleteTeacher.php?id=<?php echo $row['id']?>" class="btn btn-danger">
