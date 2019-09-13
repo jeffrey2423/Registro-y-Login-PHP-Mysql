@@ -22,7 +22,7 @@
           <tr>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['lastname']; ?></td>
-            <td><img src="../../public/img/'<?php echo $row['image']; ?>'" class="card-img-top"  alt="Card image cap"></td>
+            <td><img src="../../../public/img/<?php echo $row['image']; ?>" class="card-img-top"  alt="Card image cap"></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['descripcion']; ?></td>
             <td><?php echo $row['created_at']; ?></td>

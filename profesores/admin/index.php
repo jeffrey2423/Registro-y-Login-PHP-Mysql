@@ -1,6 +1,7 @@
 <?php 
     require 'controller/conexionBD.php'; 
     require 'includes/header.php'; 
+    echo dirname( __DIR__);
 ?>
 
 <main class="container p-5" style="max-width: 100rem;">
