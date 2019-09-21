@@ -25,13 +25,24 @@
       </li>
     <?php } ?>
 
-      <?php if (isset($_SESSION['login'])) { ?>
+      <?php if (isset($_SESSION['login']) && $archivo == "admin.php") { ?>
       <li class="nav-item dropdown ml-auto">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo $_SESSION['username'];  ?>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="controller/signOut.php">Cerrar sesion</a>
+            </div>
+      </li>
+      <?php } ?>
+
+      <?php if (isset($_SESSION['login']) && $archivo == "update.php") { ?>
+      <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo $_SESSION['username'];  ?>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../controller/signOut.php">Cerrar sesion</a>
             </div>
       </li>
       <?php } ?>
