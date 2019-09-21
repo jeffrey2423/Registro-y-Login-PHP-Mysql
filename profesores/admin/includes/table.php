@@ -1,14 +1,15 @@
+<div class="table-responsive">
 <table class="table table-hover my-5">
         <thead class="thead-dark">
           <tr>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>Imagen</th>
             <th>Email</th>
             <th>Descripcion</th>
             <th>Fecha Creacion</th>
             <th>Sede</th>
-            <th>Acciones</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -22,7 +23,6 @@
           <tr>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['lastname']; ?></td>
-            <td><a><img src="../../public/img/<?php echo $row['image']; ?>" class="card-img-top"  alt="Card image cap"></a></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['descripcion']; ?></td>
             <td><?php echo $row['created_at']; ?></td>
@@ -31,7 +31,9 @@
               <a href="./vistas/update.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="./controller/deleteTeacher.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+            </td>
+            <td>
+              <a href="./controller/deleteTeacher.php?id=<?php echo $row['id']?>" class="btn btn-danger" id="delete">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
@@ -39,3 +41,16 @@
           <?php } ?>
         </tbody>
 </table>
+</div>
+
+<script type="text/javascript">
+       (function() {
+         var delete = document.getElementById('delete');
+         delete.addEventListener("click", function(event) {
+           // si es false entonces que no haga el submit
+           if (!confirm('Realmente desea eliminar?')) {
+             event.preventDefault();
+           }
+         }, false);
+       })();
+</script>

@@ -1,21 +1,27 @@
 <?php 
-    require '../controller/conexionBD.php'; 
+    require '../controller/conexionBD.php';
+
+    if (isset($_SESSION['login'])){
+        
+    }else{
+        header('Location: index.php?Acceso=Denegado');//Aqui lo redireccionas al lugar que quieras.
+    } 
     require '../includes/header.php';
+    require '../includes/navbar.php'; 
     $result = "";
     $query = "";
   
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
-        echo $id;
         $query = "SELECT docente.id, docente.name, docente.lastname, docente.image,
         docente.email, docente.descripcion, docente.created_at, sede.nombre_sede FROM docente INNER JOIN sede ON docente.sede_id = sede.id_sede WHERE docente.id = $id;";
         $result = mysqli_query($connection, $query);
     }
 ?>
-    
+
     <div class="container">
     <?php while($row = mysqli_fetch_array($result)) {?>
-        <form action="../controller/updateTeacher.php?id=<?php echo $row['id'];?>" method="POST" enctype="multipart/form-data" class="my-5">
+        <form action="../controller/updateTeacher.php?id=<?php echo $_GET['id']; ?>" method="POST" enctype="multipart/form-data" class="my-5">
        
             
             <div class="form-row">

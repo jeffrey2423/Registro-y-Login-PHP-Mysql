@@ -34,7 +34,7 @@
                         if($row > 0){
                             $_SESSION['message'] = 'Error, El email ya esta, por favor intenta con otro';
                             $_SESSION['message_type'] = 'danger';
-                            header('Location: ../index.php');
+                            header('Location: ../admin.php');
                         }else{
                             $allowedExts = array("gif", "jpeg", "jpg", "png");
                             $temp = explode(".", $_FILES["file"]["name"]);
@@ -52,14 +52,14 @@
                                     //verificamos que venga algo en el input file
                                     $_SESSION['message'] = 'Error, algo ocurre, por favor intenta nuevamente';
                                     $_SESSION['message_type'] = 'danger';
-                                    header('Location: ../index.php');
+                                    header('Location: ../admin.php');
                                 }else{
                                     //subimos la imagen
                                     $imagen= $random.'_'.$_FILES["file"]["name"];
                                     if(file_exists("../../public/img/".$random.'_'.$_FILES["file"]["name"])){
                                         $_SESSION['message'] = 'Error, la imagen ya esta, por favor intenta con otra';
                                         $_SESSION['message_type'] = 'danger';
-                                        header('Location: ../index.php');
+                                        header('Location: ../admin.php');
                                         
                                     }else{
                                         move_uploaded_file($_FILES["file"]["tmp_name"],
@@ -83,14 +83,14 @@
                                         unset($_SESSION['apellido']);
                                         unset($_SESSION['email']);
                                         unset($_SESSION['area']);
-                                        header('Location: ../index.php');
+                                        header('Location: ../admin.php');
                                             
                                     }
                                 }
                             }else{
                                 $_SESSION['message'] = 'Error, formato de imagen no soportado';
                                 $_SESSION['message_type'] = 'danger';
-                                header('Location: ../index.php');
+                                header('Location: ../admin.php');
                             
                     
                             }
@@ -98,23 +98,23 @@
                     }else{
                         $_SESSION['message'] = 'Error, no ha seleccionado la sede';
                         $_SESSION['message_type'] = 'danger';
-                        header('Location: ../index.php');
+                        header('Location: ../admin.php');
                     }
                 }else{
                     $_SESSION['message'] = 'Error, no ha seleccionado la imagen';
                     $_SESSION['message_type'] = 'danger';
-                    header('Location: ../index.php');
+                    header('Location: ../admin.php');
                 }   
                 
             }else{
                 $_SESSION['message'] = 'Error, Las claves no coinciden';
                 $_SESSION['message_type'] = 'danger';
-                header('Location: ../index.php');
+                header('Location: ../admin.php');
             }
         }else{
             $_SESSION['message'] = 'Error, todos los campos son obligatorios';
             $_SESSION['message_type'] = 'danger';
-            header('Location: ../index.php');
+            header('Location: ../admin.php');
         }
 
     }

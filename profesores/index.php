@@ -1,5 +1,10 @@
 <?php
 require './php/conexionBD.php';
+if (isset($_SESSION['login'])){
+  header('Location: admin/admin.php?Acceso=Denegado');//Aqui lo redireccionas al lugar que quieras.
+}else{
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
