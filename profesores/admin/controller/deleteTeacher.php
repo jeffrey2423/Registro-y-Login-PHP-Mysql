@@ -10,6 +10,6 @@ if(isset($_GET['id'])) {
   }
   $_SESSION['message'] = 'Docente eliminado con exito';
   $_SESSION['message_type'] = 'danger';
-  header('Location: ../index.php');
+  header('Location: ../admin.php');
 }
 ?>
