@@ -19,7 +19,7 @@
 					<h3>Iniciar Sesion</h3>
 				</div>
 				<div class="card-body">
-					<img src="../public/img/man.png" alt="logo-user" class="rounded-circle mb-2" width="100px">
+					<img src="../public/img/ESCUDO.jpg" alt="logo-user" class="rounded-circle mb-2" width="100px">
 					<form action="controller/controladorSignin.php" method="POST">
 						<div class="form-group">
 							<input type="text" name="usuario" placeholder="Nombre Usuario" class="form-control" >

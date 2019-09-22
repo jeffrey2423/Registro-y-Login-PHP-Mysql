@@ -2,7 +2,10 @@
     $archivo =  basename($_SERVER['PHP_SELF']);
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="http://www.eldiamante.com.co/">IEO El Diamante</a>
+  <a class="navbar-brand" href="http://www.eldiamante.com.co/">
+  <img src="../public/img/ESCUDO.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+  IEO El Diamante
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

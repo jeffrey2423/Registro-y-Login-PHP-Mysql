@@ -21,7 +21,11 @@ if (isset($_SESSION['login'])){
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!--<img src="/imagenes/escuddi.png" alt="Icetex" width="5%" height="5%">--><a class="navbar-brand" href="http://www.eldiamante.com.co/">IEO El Diamante</a>	
+  <!--<img src="/imagenes/escuddi.png" alt="Icetex" width="5%" height="5%">-->
+  <a class="navbar-brand" href="http://www.eldiamante.com.co/">
+  <img src="public/img/ESCUDO.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+  IEO El Diamante
+  </a>	
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,6 +66,6 @@ if (isset($_SESSION['login'])){
 
 <script src="js/get-teacher-helper.js"> </script>
 
-<!--<script src="js/navbar-item.js"></script>-->
+
 
 </html>
